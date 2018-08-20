@@ -3,36 +3,43 @@ const nmrDeBanners = 4
 //nmeDeBanners é a quantidade de banners -1 que
 //existem na pasta imagens.
 
+var animacaoRight = 'animated slideInRight'
+var animacaoLeft = 'animated slideInLeft'
+var animacaofim = 'webkitAnimationEnd'
+
+var $arrowRight = $('section .fa-angle-right')
+var $arrowLeft = $('section .fa-angle-left')
+var $banners = $('section#banners')
+
 export function changeBanner(){
-  var animacaotipo = 'animated slideInRight';
-  var animacaofim = 'webkitAnimationEnd'
- $('section .fa-angle-right').click(function(){
+ $arrowRight.click(function(){
    banner++
    if(banner > nmrDeBanners)
      banner = 0
-    $('section#banners').css({"background-image": `url('./imagens/banner${banner}.jpg')`})
-      .addClass(animacaotipo).one(animacaofim, function(){
-      $(this).removeClass(animacaotipo);
+    $banners.css({"background-image": `url('./imagens/banner${banner}.jpg')`})
+      .addClass(animacaoRight).one(animacaofim, function(){
+      $(this).removeClass(animacaoRight)
    })
  })
- $('section .fa-angle-left').click(function(){
+ $arrowLeft.click(function(){
    banner--
    if(banner < 0)
      banner = nmrDeBanners
-    $('section#banners').css({"background-image": `url('./imagens/banner${banner}.jpg')`})
-      .addClass(animacaotipo).one(animacaofim, function(){
-      $(this).removeClass(animacaotipo);
+    $banners.css({"background-image": `url('./imagens/banner${banner}.jpg')`})
+      .addClass(animacaoLeft).one(animacaofim, function(){
+      $(this).removeClass(animacaoLeft)
    })
  })
 }
 
 export function autoChangeBanner(){
  setInterval(function(){
-  var animacaotipo = 'animated slideInRight';
-  var animacaofim = 'webkitAnimationEnd'
-   $('section#banners').css({"background-image": `url('./imagens/banner${banner}.jpg')`})
-    .addClass(animacaotipo).one(animacaofim, function(){
-      $(this).removeClass(animacaotipo);
+   $banners.addClass(animacaoLeft).one(animacaofim, function() {
+     $(this).removeClass(animacaoLeft)
+   })
+   $banners.css({"background-image": `url('./imagens/banner${banner}.jpg')`})
+    .addClass(animacaoRight).one(animacaofim, function(){
+      $(this).removeClass(animacaoRight)
    })
    banner++
    if(banner > nmrDeBanners)
