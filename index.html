@@ -5,7 +5,8 @@
 	<title>Like Clash Royale</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/ggpopover.css">
-  <link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" href="css/changeBanner.css">
+  	<link rel="stylesheet" type="text/css" href="css/animate.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/styleContent.css">
 	<link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css">
@@ -18,7 +19,7 @@
 </head>
 <body>
 
-	<div class="background "></div>
+	<!-- <div class="background "></div> -->
 
 	<header>
 			<nav>
@@ -36,12 +37,26 @@
 		</nav>
 	</header>
 
-	<section id="banners">
+	<div class="container">
+        <div class="jcarousel">
+            <ul class="slides">
+                <li data-number="1"><img src="./imagens/slide1.jpg"></li>
+                <li data-number="2"><img src="./imagens/slide2.jpg"></li>
+                <li data-number="3"><img src="./imagens/slide3.jpg"></li>
+                <li data-number="4"><img src="./imagens/slide4.jpg"></li>
+                <li data-number="5"><img src="./imagens/slide5.jpg"></li>
+            </ul>
+            <div class="jcarousel-pagination">
+            </div>
+        </div>
+    </div>
+
+	<!-- <section id="banners">
 		<div id="arrowsAndDots">
 			<i class="fa fa-angle-left"></i>
 			<i class="fa fa-angle-right"></i>
 		</div>
-	</section>
+	</section> -->
 
 	<div class="pageTotal">
 		<div class="pag">
@@ -159,6 +174,9 @@
 	</section>
 
 </body>
-<script type="text/javascript" src="js/ggpopover.js"></script>
-<script type="text/javascript" src="build/bundle.js"></script>
+	<script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.jcarousel.js"></script>
+	<script type="text/javascript" src="./js/ggpopover.js"></script>
+	<script src="./js/changeBannerv2.js"></script>
+	<script type="text/javascript" src="build/bundle.js"></script>
 </html>
