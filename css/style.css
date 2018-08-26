@@ -29,10 +29,12 @@ body{
 }
 
 .intro{
+	width: 80%;
 	display: grid;
 	grid-template-areas: "header section footer";
+	margin-left: 5%;
 	text-align: center;
-	grid-column-gap: 20px;
+	grid-column-gap: 10%;
 	margin-top:  30px;
 	margin-bottom: 30px;
 }
@@ -175,11 +177,9 @@ button:hover{
 /*estilização do Light Box*/
 
 .box{
-	margin-left: -350px;
-	margin-top: 0px;
+	margin-top: 5%;
 	position: fixed;
 	top: 10%;
-	left: 30%;
 	width: 500px;
 	height: 400px;
 	background-color: #ffffff;
@@ -363,6 +363,7 @@ p.namecard{
 	background-color: white;
 	padding: 20px 50px 100px 50px;
 	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 #arenas{
